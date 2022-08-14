@@ -1,7 +1,7 @@
-CHAT_SERVER_HOST = "172.17.0.2:50051"
+CHAT_SERVER_HOST = "172.31.12.236:5000"
 
 # IDs de usuários registrados com os respectivos endereços IP
 registry = {
-    "Alice":"172.17.0.3:50051",
-    "Bob":"172.17.0.4:50051"
+    "Alice":"172.31.90.130:5000",
+    "Bob":"172.31.80.176:5000"
 }
