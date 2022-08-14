@@ -15,8 +15,8 @@ class Message(chatserver_pb2_grpc.MessageServicer):
     def SendMessage(self, request, context):
         
         print('\n')
-        print(f"(NEW MESSAGE) FROM: {request.remt} - TO: {request.dest}")
-        print(f"MESSAGE: {request.msg}\n")
+        print(f"(NOVA MENSAGEM) FROM: {request.remt} - TO: {request.dest}")
+        print(f"MENSAGEM: {request.msg}\n")
         return chatserver_pb2.StatusMessage(message='ACK')
 
 def Recv():
@@ -37,8 +37,8 @@ def run(remt,dest,ip_dest,msg):
         #print(response)
 
 def inputdados():
-    dest = input("ENTER DESTINATION: ")
-    msg = input("ENTER MESSAGE: ")
+    dest = input("INSIRA O DESTINATARIO: ")
+    msg = input("DIGITE A MENSAGEM: ")
     return dest,msg
 
 if __name__ == '__main__':
