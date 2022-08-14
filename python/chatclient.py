@@ -23,7 +23,7 @@ def Recv():
     #print('Server-Client Init')
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     chatserver_pb2_grpc.add_MessageServicer_to_server(Message(), server)
-    server.add_insecure_port('[::]:50051')
+    server.add_insecure_port('[::]:5000')
     server.start()
     server.wait_for_termination()
 
