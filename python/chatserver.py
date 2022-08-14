@@ -11,7 +11,7 @@ def Forward(remt,dest,ip_dest,msg):
     with grpc.insecure_channel(ip_dest) as channel:
         stub = chatserver_pb2_grpc.MessageStub(channel)
         response = stub.SendMessage(chatserver_pb2.MessageData(remt=remt,dest=dest,ip_dest=ip_dest,msg=msg))
-        print("Client received: " + response.message)
+        print("Client recebeu: " + response.message)
 
 class Message(chatserver_pb2_grpc.MessageServicer):
 
